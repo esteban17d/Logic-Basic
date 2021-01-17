@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="logic_basic1" model="logic.basic">
+            <field name="name">Operation 1</field>
+            <field name="binary_integer_number">010101</field>
+        </record>
+
+        <record id="logic_basic2" model="logic.basic">
+            <field name="name">Operation 2</field>
+            <field name="binary_integer_number">010101</field>
+        </record>
+    </data>
+</odoo>

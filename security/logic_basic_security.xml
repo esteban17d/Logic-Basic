@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="ir.module.category" id="category_logic_basic">
+        <field name="name">LOGIC BASIC ADMI</field>   
+        <field name="sequence">8</field>   
+    </record>
+
+    <record model="res.groups" id="group_basic">
+        <field name="name">Basic</field>   
+        <field name="category_id" ref="category_logic_basic"/>   
+    </record>
+
+    <record model="res.groups" id="group_pro">
+        <field name="name">Pro</field>   
+        <field name="category_id" ref="category_logic_basic"/>   
+        <field name="implied_ids" eval="[(4, ref('group_basic'))]"/>
+    </record>
+</odoo>

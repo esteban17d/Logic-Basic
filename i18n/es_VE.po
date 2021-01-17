@@ -1,0 +1,238 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* logic_basic
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-01-10 18:49+0000\n"
+"PO-Revision-Date: 2021-01-10 14:52-0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: es_VE\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic__number_of_bits
+msgid "Amount of ones"
+msgstr "Cantidad de unos"
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic__t_letter
+msgid "Amount of times that is repeated:"
+msgstr "Cantidad de veces que se repite:"
+
+#. module: logic_basic
+#: model:ir.model,name:logic_basic.model_logic_basic
+msgid "Awesome model"
+msgstr "Modelo asombroso"
+
+#. module: logic_basic
+#: model:res.groups,name:logic_basic.group_basic
+msgid "Basic"
+msgstr "Basico"
+
+#. module: logic_basic
+#: model_terms:ir.ui.view,arch_db:logic_basic.view_logic_basic_form
+msgid "Create number"
+msgstr "Crear numero"
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic__create_uid
+#: model:ir.model.fields,field_description:logic_basic.field_numbers__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic__create_date
+#: model:ir.model.fields,field_description:logic_basic.field_numbers__create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: logic_basic
+#: model:ir.actions.report,name:logic_basic.report_logic_basic
+msgid "Direct to pdf"
+msgstr "Directo a pdf"
+
+#. module: logic_basic
+#: model:ir.actions.report,print_report_name:logic_basic.report_logic_basic
+msgid "Direct_to_pdf_report"
+msgstr ""
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic__display_name
+#: model:ir.model.fields,field_description:logic_basic.field_numbers__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_numbers__floatt
+msgid "Float"
+msgstr "Flotante"
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic__amount_l_numbers
+msgid "How many large numbers want to show?"
+msgstr "Cuantos numeros grandes deseas mostrar"
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic__amount_s_numbers
+msgid "How many small numbers want to show?"
+msgstr "Cuantos numeros pequeños deseas mostrar"
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic__id
+#: model:ir.model.fields,field_description:logic_basic.field_numbers__id
+msgid "ID"
+msgstr ""
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic__number_to_reverse
+msgid "Insert any number:"
+msgstr "Inserta algun numero"
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic__mathematic_operation
+msgid "Insert here your operation:"
+msgstr "Inserta aqui tu operacion"
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic__insert_sentence
+msgid "Insert here your sentence:"
+msgstr "Inserta aqui tu frase"
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic__binary_integer_number
+msgid "Insert number binary"
+msgstr "Inserta un numero binario"
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic__insert_letter
+msgid "Insert your letter:"
+msgstr "Inserta tu letra:"
+
+#. module: logic_basic
+#: model_terms:ir.ui.view,arch_db:logic_basic.layout_direct_to_pdf
+msgid "LOGIC BASIC"
+msgstr ""
+
+#. module: logic_basic
+#: model:ir.module.category,name:logic_basic.category_logic_basic
+msgid "LOGIC BASIC ADMI"
+msgstr ""
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic__largest_numbers
+msgid "Largest numbers"
+msgstr "Numeros mas grandes"
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic____last_update
+#: model:ir.model.fields,field_description:logic_basic.field_numbers____last_update
+msgid "Last Modified on"
+msgstr "Ultima modificacion en"
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic__write_uid
+#: model:ir.model.fields,field_description:logic_basic.field_numbers__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic__write_date
+#: model:ir.model.fields,field_description:logic_basic.field_numbers__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: logic_basic
+#: model:ir.ui.menu,name:logic_basic.menu_logic_basic_into
+msgid "Logic"
+msgstr ""
+
+#. module: logic_basic
+#: model:ir.ui.menu,name:logic_basic.menu_logic_basic_main
+#: model_terms:ir.ui.view,arch_db:logic_basic.view_logic_basic_form
+#: model_terms:ir.ui.view,arch_db:logic_basic.view_logic_basic_tree
+#: model_terms:ir.ui.view,arch_db:logic_basic.view_numbers_form
+msgid "Logic Basic"
+msgstr ""
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_numbers__many_id
+msgid "Many ID"
+msgstr ""
+
+#. module: logic_basic
+#: model_terms:ir.ui.view,arch_db:logic_basic.view_logic_basic_form
+msgid "Mathematic Operation"
+msgstr "Operacion matematica"
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic__name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: logic_basic
+#: model:ir.model,name:logic_basic.model_numbers
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic__numbers_ids
+#: model:ir.ui.menu,name:logic_basic.menu_logic_basic_numbers
+#: model_terms:ir.ui.view,arch_db:logic_basic.view_logic_basic_form
+#: model_terms:ir.ui.view,arch_db:logic_basic.view_numbers_form
+#: model_terms:ir.ui.view,arch_db:logic_basic.view_numbers_tree
+msgid "Numbers"
+msgstr "Numeros"
+
+#. module: logic_basic
+#: model:ir.ui.menu,name:logic_basic.menu_logic_basic_options
+msgid "Options"
+msgstr "Opciones"
+
+#. module: logic_basic
+#: model:res.groups,name:logic_basic.group_pro
+msgid "Pro"
+msgstr ""
+
+#. module: logic_basic
+#: model_terms:ir.ui.view,arch_db:logic_basic.layout_direct_to_pdf
+msgid "Report LOGIC BASIC"
+msgstr ""
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic__result_operation
+msgid "Result"
+msgstr "Resultado"
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic__number_reverse
+msgid "Reverse number"
+msgstr "Numero en reversa"
+
+#. module: logic_basic
+#: model_terms:ir.ui.view,arch_db:logic_basic.view_logic_basic_form
+msgid "Sentence"
+msgstr "Frase"
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic__show_amount_ones
+msgid "Show amount of ones"
+msgstr "Mostrar cantida de unos"
+
+#. module: logic_basic
+#: model:ir.model.fields,field_description:logic_basic.field_logic_basic__smallest_numbers
+msgid "Smallest numbers"
+msgstr "Numeros mas pequeños"
+
+#. module: logic_basic
+#: model:ir.actions.act_window,name:logic_basic.action_logic
+msgid "action.logic"
+msgstr ""
+
+#. module: logic_basic
+#: model:ir.actions.act_window,name:logic_basic.action_numbers
+msgid "action.numbers"
+msgstr ""

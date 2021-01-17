@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_logic_basic_form" model="ir.ui.view">
+        <field name="name">view.logic.basic.form</field>
+        <field name="model">logic.basic</field>
+        <field name="arch" type="xml">
+            <form string="Logic Basic">
+                <header>
+                    <button
+                        name="action_check"
+                        string="Check"
+                        type="object"
+                        attrs="{'invisible': [('state', '=', 'checked')]}"
+                    />
+
+                    <button
+                        name="action_back_to_edit"
+                        string="Edit"
+                        type="object"
+                        attrs="{'invisible': [('state', '=', 'to_verify')]}"
+                    />
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet string="Logic Basic">
+                    <div class="row">
+                        <h1>
+                            <field name="favorite" widget="priority" nolabel="1" class="mr-2"/>
+                            <field name="name" class="col-10" attrs="{'readonly': [('state', '=', 'checked')]}"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group name="left_side">
+                            <field name="number_to_reverse" attrs="{'readonly': [('state', '=', 'checked')]}"/>
+                            <field name="number_reverse" attrs="{'readonly': [('state', '=', 'checked')]}"/>
+                        </group>
+                        <group name="right_side">
+                            <field name="binary_integer_number" attrs="{'readonly': [('state', '=', 'checked')]}"/>
+                            <field 
+                                name="number_of_bits"
+                                attrs="{'invisible': [('show_amount_ones', '=', False)]}"
+                            />
+                            <field name="show_amount_ones"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="page1" string="Numbers">
+                            <field name="numbers_ids" attrs="{'readonly': [('state', '=', 'checked')]}">
+                                <form string="Create number">
+                                    <field name="floatt"/>
+                                </form>
+                                <tree>
+                                    <field name="floatt"/>
+                                </tree>
+                            </field>
+                            <group>
+                                <group>
+                                    <field name="amount_l_numbers" attrs="{'readonly': [('state', '=', 'checked')]}"/>
+                                    <field name="amount_s_numbers" attrs="{'readonly': [('state', '=', 'checked')]}"/>
+                                </group>
+                                <group>
+                                    <field name="largest_numbers" attrs="{'readonly': [('state', '=', 'checked')]}"/>
+                                    <field name="smallest_numbers" attrs="{'readonly': [('state', '=', 'checked')]}"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page name="page2" string="Mathematic Operation">
+                            <group>
+                                <group>
+                                    <field name="mathematic_operation" attrs="{'readonly': [('state', '=', 'checked')]}"/>
+                                </group>
+                                <group>
+                                    <field name="result_operation" attrs="{'readonly': [('state', '=', 'checked')]}"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page name="page3" string="Sentence">
+                            <group>
+                                <group>
+                                    <field name="insert_sentence" attrs="{'readonly': [('state', '=', 'checked')]}"/>
+                                    <field name="t_letter" attrs="{'readonly': [('state', '=', 'checked')]}"/>
+                                </group>
+                                <group>
+                                    <field name="insert_letter" attrs="{'readonly': [('state', '=', 'checked')]}"/>
+                                </group>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_logic_basic_tree" model="ir.ui.view">
+        <field name="name">view.logic.basic.tree</field>
+        <field name="model">logic.basic</field>
+        <field name="arch" type="xml">
+            <tree string="Logic Basic">
+                <field name="favorite" widget="priority" nolabel="1"/>
+                <field name="name"/>
+                <field name="binary_integer_number"/>
+                <field name="number_of_bits"/>
+                <field name="state" widget="badge" decoration-success="state == 'checked'" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_logic_basic_pivot" model="ir.ui.view">
+        <field name="name">view.logic.basic.pivot</field>
+        <field name="model">logic.basic</field>
+        <field name="arch" type="xml">
+            <pivot string="Logic Basic">
+                <field name="name" type="row"/>
+                <field name="binary_integer_number" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="view_logic_basic_graph" model="ir.ui.view">
+        <field name="name">view.logic.basic.graph</field>
+        <field name="model">logic.basic</field>
+        <field name="arch" type="xml">
+            <graph string="Logic Basic">
+                <field name="name"/>
+                <field name="binary_integer_number" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_logic_basic_kanban" model="ir.ui.view">
+        <field name="name">view.logic.basic.kanban</field>
+        <field name="model">logic.basic</field>
+        <field name="arch" type="xml">
+            <kanban string="Logic Basic">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_content oe_kanban_global_click">
+                            <div class="row">
+                                <div class="col-3">
+                                    <field name="favorite" widget="priority" nolabel="1"/>
+                                </div>
+                                <div class="col-5">
+                                    <strong><field name="name"/></strong>
+                                </div>
+                                <div class="col-4">
+                                    <field name="state" widget="badge" decoration-success="state == 'checked'"/>
+                                </div>
+                                <div class="col-6">
+                                    <strong>Binary: </strong><field name="binary_integer_number"/>
+                                </div>
+                                <div class="col-6">
+                                    <strong>Bits: </strong><field name="number_of_bits"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="action_logic" model="ir.actions.act_window">
+        <field name="name">action.logic</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">logic.basic</field>
+        <field name="view_mode">tree,form,kanban,pivot,graph</field>
+    </record>
+
+    <record id="action_numbers" model="ir.actions.act_window">
+        <field name="name">action.numbers</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">numbers</field>
+        <field name="view_mode">tree,form,kanban,pivot,graph</field>
+    </record>
+
+    <menuitem
+        name='Logic Basic'
+        id='menu_logic_basic_main'
+        sequence='5'
+    />
+
+    <menuitem
+        name='Options'
+        id='menu_logic_basic_options'
+        parent='menu_logic_basic_main'
+        sequence='4'
+    />
+
+    <menuitem
+        name='Logic'
+        id='menu_logic_basic_into'
+        parent='menu_logic_basic_options'
+        sequence='4'
+        action='action_logic'
+    />
+
+    <menuitem
+        name='Numbers'
+        id='menu_logic_basic_numbers'
+        parent='menu_logic_basic_options'
+        sequence='8'
+        action='action_numbers'
+    />
+</odoo>

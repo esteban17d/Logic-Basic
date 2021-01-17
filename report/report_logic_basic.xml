@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <report id="report_logic_basic" 
+            string="Report"
+            model="logic.basic"
+            report_type="qweb-pdf"
+            name="logic_basic.report_logic_basic"
+        />
+
+        <template id="report_logic_basic">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.internal_layout">
+                        <div class="page">
+                            <h2>Report LOGIC BASIC</h2>
+                            <h4><spam t-field="o.name"/></h4>
+
+                            <div class="row">
+                            <div class="col-6">
+                                <h5><strong>Binary: </strong><spam t-field="o.binary_integer_number"/>
+                                </h5>
+                            </div>
+                            <div class="col-6">
+                                <h5><strong>Bits: </strong><spam t-field="o.number_of_bits"/>
+                                </h5>
+                            </div>
+                            </div>
+
+                            <div class="row">
+                            <div class="col-6">
+                                <h5><strong>Largest numbers: </strong><spam t-field="o.largest_numbers"/>
+                                </h5>
+                            </div>
+                            <div class="col-6">
+                                <h5><strong>Smallest numbers: </strong><spam t-field="o.smallest_numbers"/>
+                                </h5>
+                            </div>
+                            </div>
+
+                            <div class="row">
+                            <div class="col-6">
+                                <h5><strong>Operation: </strong><spam t-field="o.mathematic_operation"/>
+                                </h5>
+                            </div>
+                            <div class="col-6">
+                                <h5><strong>Result: </strong><spam t-field="o.result_operation"/>
+                                </h5>
+                            </div>
+                            </div>
+
+                            <div class="row">
+                            <div class="col-4">
+                                <h5><strong>Sentence: </strong><spam t-field="o.insert_sentence"/>
+                                </h5>
+                            </div>
+                            <div class="col-4">
+                                <h5><strong>Letter: </strong><spam t-field="o.insert_letter"/>
+                                </h5>
+                            </div>
+                            <div class="col-4">
+                                <h5><strong>Total letter: </strong><spam t-field="o.t_letter"/>
+                                </h5>
+                            </div>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

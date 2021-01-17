@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_logic_basic_group_basic,logic.basic,model_logic_basic,group_basic,1,0,0,0
+access_numbers_group_basic,numbers,model_numbers,group_basic,1,0,0,0
+access_logic_basic_group_pro,logic.basic,model_logic_basic,group_pro,1,1,1,1
+access_numbers_group_pro,numbers,model_numbers,group_pro,1,1,1,1

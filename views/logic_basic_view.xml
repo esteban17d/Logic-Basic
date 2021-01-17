@@ -172,6 +172,15 @@
         <field name="view_mode">tree,form,kanban,pivot,graph</field>
     </record>
 
+    <record id="action_math_wizard" model="ir.actions.act_window">
+        <field name="name">Math Wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">math.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="math_wizard_form"/>
+        <field name="target">new</field>
+    </record>
+
     <menuitem
         name='Logic Basic'
         id='menu_logic_basic_main'
@@ -199,5 +208,13 @@
         parent='menu_logic_basic_options'
         sequence='8'
         action='action_numbers'
+    />
+
+    <menuitem
+        name='Wizard'
+        id='menu_math_wizard'
+        parent='menu_logic_basic_options'
+        sequence='12'
+        action='action_math_wizard'
     />
 </odoo>

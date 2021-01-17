@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="math_wizard_form" model="ir.ui.view">
+        <field name="name">math.wizard.form</field>
+        <field name="model">math.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Math wizard">
+                <group>
+                    <group name="left_side">
+                        <field name="num_1"/>
+                        <field name="spot_result"/>
+                    </group>
+                    <group name="right_side">
+                        <field name="num_2"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+</odoo>

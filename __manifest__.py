@@ -12,6 +12,7 @@
         'data/logic_basic_data.xml',
         'views/logic_basic_view.xml',
         'views/numbers_view.xml',
-        'report/report_logic_basic.xml'
+        'report/report_logic_basic.xml',
+        'wizard/logic_basic_wizard.xml'
     ]
 }

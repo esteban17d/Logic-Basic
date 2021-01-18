@@ -7,7 +7,6 @@ class MathWizard(models.TransientModel):
 
     _name = "math.wizard"
     _description = "Ventana emergente"
-    _inherit = "logic.basic"
 
     state_wizard_logic = fields.Selection([('to_verify', 'To verify'),
                                            ('checked', 'Checked')]

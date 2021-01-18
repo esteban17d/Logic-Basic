@@ -7,11 +7,10 @@
             <form string="Math wizard">
                 <group>
                     <group name="left_side">
-                        <field name="num_1"/>
-                        <field name="spot_result"/>
+                        <field name="state_wizard_logic"/>
                     </group>
                     <group name="right_side">
-                        <field name="num_2"/>
+                        <field name="spot_result"/>
                     </group>
                 </group>
             </form>

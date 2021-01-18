@@ -7,12 +7,20 @@ class MathWizard(models.TransientModel):
 
     _name = "math.wizard"
     _description = "Ventana emergente"
+    _inherit = "logic.basic"
 
-    num_1 = fields.Float("Number º1")
-    num_2 = fields.Float("Number º2")
-    spot_result = fields.Float("Result", compute="_sum_two_numbers")
+    state_wizard_logic = fields.Selection([('to_verify', 'To verify'),
+                                           ('checked', 'Checked')]
+                                          )
+    spot_result = fields.Char("Result", compute="_sum_binary")
 
-    @api.depends("num_2")
-    def _sum_two_numbers(self):
+    @api.depends("state_wizard_logic")
+    def _sum_binary(self):
+        logicbasic = self.env["logic.basic"]
+        logic_basic_check_ids = logicbasic.search([('state', '=', 'to_verify')])
+        logic_basic_verify_ids = logicbasic.search([('state', '=', 'checked')])
         for record in self:
-            record.spot_result = record.num_1 + record.num_2
+            if record.state_wizard_logic == 'to_verify':
+                record.spot_result = sum(logic_basic_verify_ids.mapped("binary_integer_number"))
+            else:
+                record.spot_result = sum(logic_basic_check_ids.mapped("binary_integer_number"))

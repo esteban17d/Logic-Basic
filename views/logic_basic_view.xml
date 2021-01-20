@@ -181,6 +181,15 @@
         <field name="target">new</field>
     </record>
 
+    <record id="action_with_five" model="ir.actions.act_window">
+        <field name="name">Add five</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">add.five</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="add_five_wizard_form"/>
+        <field name="target">new</field>
+    </record>
+
     <menuitem
         name='Logic Basic'
         id='menu_logic_basic_main'
@@ -216,5 +225,13 @@
         parent='menu_logic_basic_options'
         sequence='12'
         action='action_math_wizard'
+    />
+
+    <menuitem
+        name='Add five'
+        id='menu_add_five_wizard'
+        parent='menu_logic_basic_options'
+        sequence='16'
+        action='action_with_five'
     />
 </odoo>

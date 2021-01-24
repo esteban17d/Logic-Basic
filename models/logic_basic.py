@@ -75,7 +75,7 @@ class LogicBasic(models.Model):
     @api.depends("mathematic_operation")
     def _result_mathematic(self):
         for record in self:
-            if type(record.mathematic_operation) != type(True):
+            if not isinstance(record.mathematic_operation, bool):
                 record.mathematic_operation = record.mathematic_operation\
                     .replace(
                         " ", ""
@@ -90,8 +90,8 @@ class LogicBasic(models.Model):
     @api.depends("insert_letter")
     def _total_letter(self):
         for record in self:
-            if type(record.insert_sentence) != type(True) and\
-                    type(record.insert_letter) != type(True):
+            if not isinstance(record.insert_sentence, bool) and\
+                    not isinstance(record.insert_letter, bool):
                 record.t_letter = record.insert_sentence.count(
                     record.insert_letter
                 )

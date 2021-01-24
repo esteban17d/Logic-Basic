@@ -75,14 +75,28 @@ class LogicBasic(models.Model):
     @api.depends("mathematic_operation")
     def _result_mathematic(self):
         for record in self:
-            record.result_operation = eval(record.mathematic_operation)
+            if type(record.mathematic_operation) != type(True):
+                record.mathematic_operation = record.mathematic_operation\
+                    .replace(
+                        " ", ""
+                    )
+                if record.mathematic_operation != "":
+                    record.result_operation = eval(record.mathematic_operation)
+                else:
+                    record.result_operation = ""
+            else:
+                record.result_operation = ""
 
     @api.depends("insert_letter")
     def _total_letter(self):
         for record in self:
-            record.t_letter = record.insert_sentence.count(
-                record.insert_letter
-            )
+            if type(record.insert_sentence) != type(True) and\
+                    type(record.insert_letter) != type(True):
+                record.t_letter = record.insert_sentence.count(
+                    record.insert_letter
+                )
+            else:
+                record.t_letter = ""
 
     @api.depends("number_to_reverse")
     def _reverse_number(self):
@@ -90,7 +104,9 @@ class LogicBasic(models.Model):
             record.number_reverse = int(str(record.number_to_reverse)[::-1])
 
     def action_check(self):
+        """Metodo para cambiar el state a checked."""
         self.write({'state': 'checked'})
 
     def action_back_to_edit(self):
+        """Metodo para cambiar el state a to verify."""
         self.write({'state': 'to_verify'})

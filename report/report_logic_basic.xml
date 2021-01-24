@@ -14,55 +14,91 @@
                 <t t-foreach="docs" t-as="o">
                     <t t-call="web.internal_layout">
                         <div class="page">
-                            <h2>Report LOGIC BASIC</h2>
-                            <h4><spam t-field="o.name"/></h4>
+                            <h2 style="font-size:36px">Report LOGIC BASIC</h2>
+                            <strong><h4 style="font-size:32px"><spam t-field="o.name"/></h4></strong>
+                            <i><spam t-field="o.state"/></i>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <div class="row mt32 mb32">
+                                <div class="col-6" t-if="o.binary_integer_number">
+                                    <div>
+                                        <h5 style="font-size:18px"><strong>Binary: </strong><spam t-field="o.binary_integer_number"/>
+                                        </h5>
+                                    </div>
+                                </div>
 
-                            <div class="row">
-                            <div class="col-6">
-                                <h5><strong>Binary: </strong><spam t-field="o.binary_integer_number"/>
+                                <div class="col-6" t-if="o.binary_integer_number">
+                                    <div>
+                                        <h5 style="font-size:18px"><strong>Bits: </strong><spam t-field="o.number_of_bits"/>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <br t-if="o.binary_integer_number"/>
+                            <div class="row mt32 mb32">
+                                <div class="col-6" t-if="o.amount_l_numbers">
+                                    <div>
+                                        <h5 style="font-size:18px"><strong>Largest numbers: </strong><spam t-field="o.largest_numbers"/>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="col-6" t-if="o.amount_s_numbers">
+                                    <div>
+                                        <h5 style="font-size:18px"><strong>Smallest numbers: </strong><spam t-field="o.smallest_numbers"/>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <br t-if="o.amount_l_numbers and o.amount_s_numbers"/>
+                            <div class="row mt32 mb32">
+                                <div class="col-6" t-if="o.mathematic_operation">
+                                    <div>
+                                        <h5 style="font-size:18px"><strong>Operation: </strong><spam t-field="o.mathematic_operation"/>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="col-6" t-if="o.mathematic_operation">
+                                    <div>
+                                        <h5 style="font-size:18px"><strong>Result: </strong><spam t-field="o.result_operation"/>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <br t-if="o.mathematic_operation"/>
+                            <div class="row mt32 mb32">
+                                <div class="col-4" t-if="o.insert_sentence and o.insert_letter">
+                                    <div>
+                                        <h5 style="font-size:18px"><strong>Sentence: </strong><spam t-field="o.insert_sentence"/>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4" t-if="o.insert_sentence and o.insert_letter">
+                                    <div>
+                                        <h5 style="font-size:18px"><strong>Letter: </strong><spam t-field="o.insert_letter"/>
+                                        </h5>
+                                    </div>
+                                </div>
+                                <div class="col-4" t-if="o.insert_sentence and o.insert_letter">
+                                    <div>
+                                        <h5 style="font-size:18px"><strong>Total letter: </strong><spam t-field="o.t_letter"/>
+                                        </h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <br t-if="o.insert_sentence and o.insert_letter"/>
+                            <br/>
+                            <br/>
+                            <div>
+                                <h5 style="text-align:center;color:red">
+                                    Notes:
                                 </h5>
-                            </div>
-                            <div class="col-6">
-                                <h5><strong>Bits: </strong><spam t-field="o.number_of_bits"/>
-                                </h5>
-                            </div>
-                            </div>
-
-                            <div class="row">
-                            <div class="col-6">
-                                <h5><strong>Largest numbers: </strong><spam t-field="o.largest_numbers"/>
-                                </h5>
-                            </div>
-                            <div class="col-6">
-                                <h5><strong>Smallest numbers: </strong><spam t-field="o.smallest_numbers"/>
-                                </h5>
-                            </div>
-                            </div>
-
-                            <div class="row">
-                            <div class="col-6">
-                                <h5><strong>Operation: </strong><spam t-field="o.mathematic_operation"/>
-                                </h5>
-                            </div>
-                            <div class="col-6">
-                                <h5><strong>Result: </strong><spam t-field="o.result_operation"/>
-                                </h5>
-                            </div>
-                            </div>
-
-                            <div class="row">
-                            <div class="col-4">
-                                <h5><strong>Sentence: </strong><spam t-field="o.insert_sentence"/>
-                                </h5>
-                            </div>
-                            <div class="col-4">
-                                <h5><strong>Letter: </strong><spam t-field="o.insert_letter"/>
-                                </h5>
-                            </div>
-                            <div class="col-4">
-                                <h5><strong>Total letter: </strong><spam t-field="o.t_letter"/>
-                                </h5>
-                            </div>
+                                <p style="text-align:center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
                         </div>
                     </t>

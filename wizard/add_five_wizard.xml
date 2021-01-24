@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="add_five_wizard_form" model="ir.ui.view">
+        <field name="name">add.five.wizard.form</field>
+        <field name="model">add.five</field>
+        <field name="arch" type="xml">
+            <form string="Add Five Wizard">
+                <group>
+                    <group name="left_side">
+                        <field name="state_select"/>
+                        <button
+                            name="action_add_five"
+                            string="Process"
+                            type="object"
+                        />
+                    </group>
+                    <group name="right_side">
+                        <field name="int_add"/>
+                    </group>
+                </group>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -14,6 +14,8 @@
         'wizard/add_five_wizard.xml',
         'views/logic_basic_view.xml',
         'views/numbers_view.xml',
-        'report/report_logic_basic.xml'
+        'report/report_logic_basic.xml',
+        'report/logic_basic_o2m_report.xml',
+        'report/logic_basic_o2m_report_template.xml'
     ]
 }

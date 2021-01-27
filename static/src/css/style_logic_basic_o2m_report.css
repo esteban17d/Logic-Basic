@@ -1,0 +1,21 @@
+.title{
+    font-size: 34px;
+}
+.state{
+    font-size: 18px;
+    text-align: right;
+    width: 60%;
+}
+.td_title{
+    font-size: 38px;
+    font-weight: bolder;
+    width: 40%;
+}
+.my-thead{
+    display: table-row-group;
+    background: #eee;
+    font-size: 21px;
+}
+td{
+    padding: 10px;
+}

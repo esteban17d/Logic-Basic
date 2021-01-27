@@ -8,5 +8,6 @@ class Numbers(models.Model):
     _name = "numbers"
     _description = "Numbers"
 
-    floatt = fields.Float("Float")
+    name_numbers = fields.Char("Name", required=True)
+    floatt = fields.Float("Float", required=True)
     many_id = fields.Many2one("logic.basic", string="Many ID")

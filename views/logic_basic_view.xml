@@ -46,9 +46,17 @@
                         <page name="page1" string="Numbers">
                             <field name="numbers_ids" attrs="{'readonly': [('state', '=', 'checked')]}">
                                 <form string="Create number">
-                                    <field name="floatt"/>
+                                    <group>
+                                        <group>
+                                            <field name="name_numbers"/>
+                                        </group>
+                                        <group>
+                                            <field name="floatt"/>
+                                        </group>
+                                    </group>
                                 </form>
                                 <tree>
+                                    <field name="name_numbers"/>
                                     <field name="floatt"/>
                                 </tree>
                             </field>

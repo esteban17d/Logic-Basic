@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="report_o2m_layout">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.internal_layout">
+                    <xpath expr="." position="inside">
+                        <link href="/logic_basic/static/src/css/style_logic_basic_o2m_report.css" rel="stylesheet" type="text/css"/>
+                    </xpath>
+                    <div class="page">
+                        <table class="table">
+                            <tr>
+                                <td class="td_title">
+                                    <h2 class="title">Report Logic Basic</h2>
+                                </td>
+                                <td class="state">
+                                    <i><spam t-field="o.state"/></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h4 style="font-size:32px"><spam t-field="o.name"/></h4>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table table-sm o_main_table">
+                            <thead class="my-thead">
+                                <tr>
+                                    <th class="text-left">Name</th>
+                                    <th class="text-right">Float</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="docs.numbers_ids" t-as="a">
+                                    <tr>
+                                        <td name="td_name_numbers"><span t-field="a.name_numbers"/></td>
+                                        <td name="td_floatt" class="text-right">
+                                        <span t-field="a.floatt"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                        <br/>
+                        <br/>
+                        <div class="row">
+                            <div class="col-6" t-if="o.amount_l_numbers">
+                                <div>
+                                    <h5 style="font-size:18px"><br/><strong>Largest numbers: </strong>
+                                    </h5>
+                                    <spam t-field="o.largest_numbers"/>
+                                </div>
+                            </div>
+                            <div class="col-6" t-if="o.amount_s_numbers">
+                                <div>
+                                    <h5 style="font-size:18px"><br/><strong>Smallest numbers: </strong>
+                                    </h5>
+                                    <spam t-field="o.smallest_numbers"/>
+                                </div>
+                            </div>
+                        </div>
+                        <br t-if="o.amount_l_numbers and o.amount_s_numbers"/>
+                    </div>
+                    <div class="footer">
+                        <p style="font-weight:bolder">Contactar:<i> estebangomezhachy@gmail.com</i></p>
+                    </div>
+                </t>
+            </t>
+        </t>
+        </template>
+    </data>
+</odoo>

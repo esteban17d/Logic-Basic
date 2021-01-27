@@ -6,7 +6,14 @@
         <field name="arch" type="xml">
             <form string="Numbers">
                 <sheet string="Logic Basic">
-                    <field name="floatt"/>
+                    <group>
+                        <group>
+                            <field name="name_numbers"/>
+                        </group>
+                        <group>
+                            <field name="floatt"/>
+                        </group>
+                    </group>
                 </sheet>
             </form>
         </field>
@@ -17,6 +24,7 @@
         <field name="model">numbers</field>
         <field name="arch" type="xml">
             <tree string="Numbers">
+                <field name="name_numbers"/>
                 <field name="floatt"/>
             </tree>
         </field>

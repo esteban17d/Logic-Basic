@@ -18,7 +18,11 @@ class LogicBasic(models.Model):
     number_reverse = fields.Integer("Reverse number",
                                     compute="_reverse_number"
                                     )
-    numbers_ids = fields.One2many("numbers", 'many_id', string="Numbers")
+    numbers_ids = fields.One2many("numbers",
+                                  'many_id',
+                                  string="Numbers",
+                                  required=True
+                                  )
     amount_l_numbers = fields.Integer("How many large numbers want to show?")
     amount_s_numbers = fields.Integer("How many small numbers want to show?")
     largest_numbers = fields.Char("Largest numbers",
